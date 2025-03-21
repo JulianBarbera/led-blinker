@@ -1,0 +1,1431 @@
+{
+  "metadata" : {
+    "deploymentName" : "LedBlinker",
+    "projectVersion" : "v3.5.0",
+    "frameworkVersion" : "v3.6.2",
+    "libraryVersions" : [
+      "fprime-arduino@v0.1.0-50-g9739fc7",
+      "fprime-baremetal@6fa7db9"
+    ],
+    "dictionarySpecVersion" : "1.0.0"
+  },
+  "typeDefinitions" : [
+    {
+      "kind" : "enum",
+      "qualifiedName" : "Fw.CmdResponse",
+      "representationType" : {
+        "name" : "I32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : true
+      },
+      "enumeratedConstants" : [
+        {
+          "name" : "OK",
+          "value" : 0,
+          "annotation" : "Command successfully executed"
+        },
+        {
+          "name" : "INVALID_OPCODE",
+          "value" : 1,
+          "annotation" : "Invalid opcode dispatched"
+        },
+        {
+          "name" : "VALIDATION_ERROR",
+          "value" : 2,
+          "annotation" : "Command failed validation"
+        },
+        {
+          "name" : "FORMAT_ERROR",
+          "value" : 3,
+          "annotation" : "Command failed to deserialize"
+        },
+        {
+          "name" : "EXECUTION_ERROR",
+          "value" : 4,
+          "annotation" : "Command had execution error"
+        },
+        {
+          "name" : "BUSY",
+          "value" : 5,
+          "annotation" : "Component busy"
+        }
+      ],
+      "default" : "Fw.CmdResponse.OK",
+      "annotation" : "Enum representing a command response"
+    },
+    {
+      "kind" : "enum",
+      "qualifiedName" : "Svc.ActiveLogger.Enabled",
+      "representationType" : {
+        "name" : "I32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : true
+      },
+      "enumeratedConstants" : [
+        {
+          "name" : "ENABLED",
+          "value" : 0,
+          "annotation" : "Enabled state"
+        },
+        {
+          "name" : "DISABLED",
+          "value" : 1,
+          "annotation" : "Disabled state"
+        }
+      ],
+      "default" : "Svc.ActiveLogger.Enabled.ENABLED",
+      "annotation" : "Enabled and disabled state"
+    },
+    {
+      "kind" : "enum",
+      "qualifiedName" : "Fw.On",
+      "representationType" : {
+        "name" : "I32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : true
+      },
+      "enumeratedConstants" : [
+        {
+          "name" : "OFF",
+          "value" : 0,
+          "annotation" : "Off state"
+        },
+        {
+          "name" : "ON",
+          "value" : 1,
+          "annotation" : "On state"
+        }
+      ],
+      "default" : "Fw.On.OFF",
+      "annotation" : "On and off states"
+    },
+    {
+      "kind" : "enum",
+      "qualifiedName" : "Fw.DeserialStatus",
+      "representationType" : {
+        "name" : "I32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : true
+      },
+      "enumeratedConstants" : [
+        {
+          "name" : "OK",
+          "value" : 0
+        },
+        {
+          "name" : "BUFFER_EMPTY",
+          "value" : 3,
+          "annotation" : "Deserialization buffer was empty when trying to read data"
+        },
+        {
+          "name" : "FORMAT_ERROR",
+          "value" : 4,
+          "annotation" : "Deserialization data had incorrect values (unexpected data types)"
+        },
+        {
+          "name" : "SIZE_MISMATCH",
+          "value" : 5,
+          "annotation" : "Data was left in in the buffer, but not enough to deserialize"
+        },
+        {
+          "name" : "TYPE_MISMATCH",
+          "value" : 6,
+          "annotation" : "Deserialized type ID didn't match"
+        }
+      ],
+      "default" : "Fw.DeserialStatus.OK",
+      "annotation" : "Deserialization status"
+    },
+    {
+      "kind" : "enum",
+      "qualifiedName" : "Svc.ActiveLogger.FilterSeverity",
+      "representationType" : {
+        "name" : "I32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : true
+      },
+      "enumeratedConstants" : [
+        {
+          "name" : "WARNING_HI",
+          "value" : 0,
+          "annotation" : "Filter WARNING_HI events"
+        },
+        {
+          "name" : "WARNING_LO",
+          "value" : 1,
+          "annotation" : "Filter WARNING_LO events"
+        },
+        {
+          "name" : "COMMAND",
+          "value" : 2,
+          "annotation" : "Filter COMMAND events"
+        },
+        {
+          "name" : "ACTIVITY_HI",
+          "value" : 3,
+          "annotation" : "Filter ACTIVITY_HI events"
+        },
+        {
+          "name" : "ACTIVITY_LO",
+          "value" : 4,
+          "annotation" : "Filter ACTIVITY_LO events"
+        },
+        {
+          "name" : "DIAGNOSTIC",
+          "value" : 5,
+          "annotation" : "Filter DIAGNOSTIC events"
+        }
+      ],
+      "default" : "Svc.ActiveLogger.FilterSeverity.WARNING_HI",
+      "annotation" : "Severity level for event filtering\nSimilar to Fw::LogSeverity, but no FATAL event"
+    },
+    {
+      "kind" : "enum",
+      "qualifiedName" : "Svc.SystemResourceEnabled",
+      "representationType" : {
+        "name" : "I32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : true
+      },
+      "enumeratedConstants" : [
+        {
+          "name" : "DISABLED",
+          "value" : 0
+        },
+        {
+          "name" : "ENABLED",
+          "value" : 1
+        }
+      ],
+      "default" : "Svc.SystemResourceEnabled.DISABLED"
+    }
+  ],
+  "commands" : [
+    {
+      "name" : "LedBlinker.cmdDisp.CMD_NO_OP_STRING",
+      "commandKind" : "async",
+      "opcode" : 257,
+      "formalParams" : [
+        {
+          "name" : "arg1",
+          "type" : {
+            "name" : "string",
+            "kind" : "string",
+            "size" : 40
+          },
+          "ref" : false,
+          "annotation" : "The String command argument"
+        }
+      ],
+      "queueFullBehavior" : "assert",
+      "annotation" : "No-op string command"
+    },
+    {
+      "name" : "LedBlinker.eventLogger.SET_ID_FILTER",
+      "commandKind" : "async",
+      "opcode" : 514,
+      "formalParams" : [
+        {
+          "name" : "ID",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false
+        },
+        {
+          "name" : "idFilterEnabled",
+          "type" : {
+            "name" : "Svc.ActiveLogger.Enabled",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false,
+          "annotation" : "ID filter state"
+        }
+      ],
+      "queueFullBehavior" : "assert",
+      "annotation" : "Filter a particular ID"
+    },
+    {
+      "name" : "LedBlinker.eventLogger.SET_EVENT_FILTER",
+      "commandKind" : "sync",
+      "opcode" : 512,
+      "formalParams" : [
+        {
+          "name" : "filterLevel",
+          "type" : {
+            "name" : "Svc.ActiveLogger.FilterSeverity",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false,
+          "annotation" : "Filter level"
+        },
+        {
+          "name" : "filterEnabled",
+          "type" : {
+            "name" : "Svc.ActiveLogger.Enabled",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false,
+          "annotation" : "Filter state"
+        }
+      ],
+      "annotation" : "Set filter for reporting events. Events are not stored in component."
+    },
+    {
+      "name" : "LedBlinker.systemResources.ENABLE",
+      "commandKind" : "guarded",
+      "opcode" : 18432,
+      "formalParams" : [
+        {
+          "name" : "enable",
+          "type" : {
+            "name" : "Svc.SystemResourceEnabled",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false,
+          "annotation" : "whether or not system resource telemetry is enabled"
+        }
+      ],
+      "annotation" : "A command to enable or disable system resource telemetry"
+    },
+    {
+      "name" : "LedBlinker.led.BLINK_INTERVAL_PRM_SET",
+      "commandKind" : "set",
+      "opcode" : 65537,
+      "formalParams" : [
+        {
+          "name" : "val",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false
+        }
+      ],
+      "annotation" : "Blinking interval in rate group ticks"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.CMD_NO_OP",
+      "commandKind" : "async",
+      "opcode" : 256,
+      "formalParams" : [
+      ],
+      "queueFullBehavior" : "assert",
+      "annotation" : "No-op command"
+    },
+    {
+      "name" : "LedBlinker.eventLogger.DUMP_FILTER_STATE",
+      "commandKind" : "async",
+      "opcode" : 515,
+      "formalParams" : [
+      ],
+      "queueFullBehavior" : "assert",
+      "annotation" : "Dump the filter states via events"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.CMD_CLEAR_TRACKING",
+      "commandKind" : "async",
+      "opcode" : 259,
+      "formalParams" : [
+      ],
+      "queueFullBehavior" : "assert",
+      "annotation" : "Clear command tracking info to recover from components not returning status"
+    },
+    {
+      "name" : "LedBlinker.led.BLINK_INTERVAL_PRM_SAVE",
+      "commandKind" : "save",
+      "opcode" : 65538,
+      "formalParams" : [
+      ],
+      "annotation" : "Blinking interval in rate group ticks"
+    },
+    {
+      "name" : "LedBlinker.timeHandler.SET_TIME",
+      "commandKind" : "sync",
+      "opcode" : 17408,
+      "formalParams" : [
+        {
+          "name" : "year",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The current year"
+        },
+        {
+          "name" : "month",
+          "type" : {
+            "name" : "U8",
+            "kind" : "integer",
+            "size" : 8,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The current month (1-12)"
+        },
+        {
+          "name" : "day",
+          "type" : {
+            "name" : "U8",
+            "kind" : "integer",
+            "size" : 8,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The current day (1-31)"
+        },
+        {
+          "name" : "hour",
+          "type" : {
+            "name" : "U8",
+            "kind" : "integer",
+            "size" : 8,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The current hour (0-23)"
+        },
+        {
+          "name" : "minute",
+          "type" : {
+            "name" : "U8",
+            "kind" : "integer",
+            "size" : 8,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The current minute (0-59)"
+        },
+        {
+          "name" : "second",
+          "type" : {
+            "name" : "U8",
+            "kind" : "integer",
+            "size" : 8,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The current second (0-59)"
+        }
+      ],
+      "annotation" : "Command to set the time"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.CMD_TEST_CMD_1",
+      "commandKind" : "async",
+      "opcode" : 258,
+      "formalParams" : [
+        {
+          "name" : "arg1",
+          "type" : {
+            "name" : "I32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : true
+          },
+          "ref" : false,
+          "annotation" : "The I32 command argument"
+        },
+        {
+          "name" : "arg2",
+          "type" : {
+            "name" : "F32",
+            "kind" : "float",
+            "size" : 32
+          },
+          "ref" : false,
+          "annotation" : "The F32 command argument"
+        },
+        {
+          "name" : "arg3",
+          "type" : {
+            "name" : "U8",
+            "kind" : "integer",
+            "size" : 8,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The U8 command argument"
+        }
+      ],
+      "queueFullBehavior" : "assert",
+      "annotation" : "No-op command"
+    },
+    {
+      "name" : "LedBlinker.led.BLINKING_ON_OFF",
+      "commandKind" : "sync",
+      "opcode" : 65536,
+      "formalParams" : [
+        {
+          "name" : "on_off",
+          "type" : {
+            "name" : "Fw.On",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false,
+          "annotation" : "Indicates whether the blinking should be on or off"
+        }
+      ],
+      "annotation" : "Command to turn on or off the blinking LED"
+    }
+  ],
+  "parameters" : [
+    {
+      "name" : "LedBlinker.led.BLINK_INTERVAL",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 65536,
+      "annotation" : "Blinking interval in rate group ticks"
+    }
+  ],
+  "events" : [
+    {
+      "name" : "LedBlinker.cmdDisp.OpCodeDispatched",
+      "severity" : "COMMAND",
+      "formalParams" : [
+        {
+          "name" : "Opcode",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The opcode dispatched"
+        },
+        {
+          "name" : "port",
+          "type" : {
+            "name" : "I32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : true
+          },
+          "ref" : false,
+          "annotation" : "The port dispatched to"
+        }
+      ],
+      "id" : 257,
+      "format" : "Opcode 0x{x} dispatched to port {}",
+      "annotation" : "Op code dispatched event"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.InvalidCommand",
+      "severity" : "WARNING_HI",
+      "formalParams" : [
+        {
+          "name" : "Opcode",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "Invalid opcode"
+        }
+      ],
+      "id" : 261,
+      "format" : "Invalid opcode 0x{x} received",
+      "annotation" : "Received an invalid opcode"
+    },
+    {
+      "name" : "LedBlinker.eventLogger.ID_FILTER_LIST_FULL",
+      "severity" : "WARNING_LO",
+      "formalParams" : [
+        {
+          "name" : "ID",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The ID filtered"
+        }
+      ],
+      "id" : 514,
+      "format" : "ID filter list is full. Cannot filter {} .",
+      "annotation" : "Attempted to add ID to full ID filter ID"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.TestCmd1Args",
+      "severity" : "ACTIVITY_HI",
+      "formalParams" : [
+        {
+          "name" : "arg1",
+          "type" : {
+            "name" : "I32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : true
+          },
+          "ref" : false,
+          "annotation" : "Arg1"
+        },
+        {
+          "name" : "arg2",
+          "type" : {
+            "name" : "F32",
+            "kind" : "float",
+            "size" : 32
+          },
+          "ref" : false,
+          "annotation" : "Arg2"
+        },
+        {
+          "name" : "arg3",
+          "type" : {
+            "name" : "U8",
+            "kind" : "integer",
+            "size" : 8,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "Arg3"
+        }
+      ],
+      "id" : 265,
+      "format" : "TEST_CMD_1 args: I32: {}, F32: {f}, U8: {}",
+      "annotation" : "This log event message returns the TEST_CMD_1 arguments."
+    },
+    {
+      "name" : "LedBlinker.eventLogger.SEVERITY_FILTER_STATE",
+      "severity" : "ACTIVITY_LO",
+      "formalParams" : [
+        {
+          "name" : "severity",
+          "type" : {
+            "name" : "Svc.ActiveLogger.FilterSeverity",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false,
+          "annotation" : "The severity level"
+        },
+        {
+          "name" : "enabled",
+          "type" : {
+            "name" : "bool",
+            "kind" : "bool",
+            "size" : 8
+          },
+          "ref" : false
+        }
+      ],
+      "id" : 512,
+      "format" : "{} filter state. {}",
+      "annotation" : "Dump severity filter state"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.MalformedCommand",
+      "severity" : "WARNING_HI",
+      "formalParams" : [
+        {
+          "name" : "Status",
+          "type" : {
+            "name" : "Fw.DeserialStatus",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false,
+          "annotation" : "The deserialization error"
+        }
+      ],
+      "id" : 260,
+      "format" : "Received malformed command packet. Status: {}",
+      "annotation" : "Received a malformed command packet"
+    },
+    {
+      "name" : "LedBlinker.led.SetBlinkingState",
+      "severity" : "ACTIVITY_HI",
+      "formalParams" : [
+        {
+          "name" : "state",
+          "type" : {
+            "name" : "Fw.On",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false
+        }
+      ],
+      "id" : 65537,
+      "format" : "Set blinking state to {}.",
+      "annotation" : "Reports the state we set to blinking."
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.OpCodeRegistered",
+      "severity" : "DIAGNOSTIC",
+      "formalParams" : [
+        {
+          "name" : "Opcode",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The opcode to register"
+        },
+        {
+          "name" : "port",
+          "type" : {
+            "name" : "I32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : true
+          },
+          "ref" : false,
+          "annotation" : "The registration port"
+        },
+        {
+          "name" : "slot",
+          "type" : {
+            "name" : "I32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : true
+          },
+          "ref" : false,
+          "annotation" : "The dispatch slot it was placed in"
+        }
+      ],
+      "id" : 256,
+      "format" : "Opcode 0x{x} registered to port {} slot {}"
+    },
+    {
+      "name" : "LedBlinker.eventLogger.ID_FILTER_REMOVED",
+      "severity" : "ACTIVITY_HI",
+      "formalParams" : [
+        {
+          "name" : "ID",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The ID removed"
+        }
+      ],
+      "id" : 515,
+      "format" : "ID filter ID {} removed.",
+      "annotation" : "Removed an ID from the filter"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.OpCodeReregistered",
+      "severity" : "DIAGNOSTIC",
+      "formalParams" : [
+        {
+          "name" : "Opcode",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The opcode reregistered"
+        },
+        {
+          "name" : "port",
+          "type" : {
+            "name" : "I32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : true
+          },
+          "ref" : false,
+          "annotation" : "The reregistration port"
+        }
+      ],
+      "id" : 266,
+      "format" : "Opcode 0x{x} is already registered to port {}",
+      "annotation" : "Op code reregistered event"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.OpCodeError",
+      "severity" : "COMMAND",
+      "formalParams" : [
+        {
+          "name" : "Opcode",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The opcode with the error"
+        },
+        {
+          "name" : "error",
+          "type" : {
+            "name" : "Fw.CmdResponse",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false,
+          "annotation" : "The error value"
+        }
+      ],
+      "id" : 259,
+      "format" : "Opcode 0x{x} completed with error {}",
+      "annotation" : "Op code completed with error event"
+    },
+    {
+      "name" : "LedBlinker.bufferManager.NoBuffsAvailable",
+      "severity" : "WARNING_HI",
+      "formalParams" : [
+        {
+          "name" : "size",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The requested size"
+        }
+      ],
+      "id" : 8192,
+      "format" : "No available buffers of size {}",
+      "annotation" : "The BufferManager was unable to allocate a requested buffer",
+      "throttle" : 10
+    },
+    {
+      "name" : "LedBlinker.eventLogger.ID_FILTER_NOT_FOUND",
+      "severity" : "WARNING_LO",
+      "formalParams" : [
+        {
+          "name" : "ID",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The ID removed"
+        }
+      ],
+      "id" : 516,
+      "format" : "ID filter ID {} not found.",
+      "annotation" : "ID not in filter"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.NoOpReceived",
+      "severity" : "ACTIVITY_HI",
+      "formalParams" : [
+      ],
+      "id" : 263,
+      "format" : "Received a NO-OP command",
+      "annotation" : "The command dispatcher has successfully received a NO-OP command"
+    },
+    {
+      "name" : "LedBlinker.timeHandler.TimeUpdate",
+      "severity" : "ACTIVITY_HI",
+      "formalParams" : [
+        {
+          "name" : "original_seconds",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The seconds before the time update"
+        },
+        {
+          "name" : "original_microseconds",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The microseconds before the time update"
+        },
+        {
+          "name" : "original_base",
+          "type" : {
+            "name" : "U8",
+            "kind" : "integer",
+            "size" : 8,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The time base before the update"
+        },
+        {
+          "name" : "new_seconds",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The seconds after the time update"
+        },
+        {
+          "name" : "new_microseconds",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The microseconds after the time update"
+        },
+        {
+          "name" : "new_base",
+          "type" : {
+            "name" : "U8",
+            "kind" : "integer",
+            "size" : 8,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The time base adter the update"
+        }
+      ],
+      "id" : 17408,
+      "format" : "Time updated from {}.{} ({}) to {}.{} ({})",
+      "annotation" : "Command to set the time"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.OpCodeCompleted",
+      "severity" : "COMMAND",
+      "formalParams" : [
+        {
+          "name" : "Opcode",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The I32 command argument"
+        }
+      ],
+      "id" : 258,
+      "format" : "Opcode 0x{x} completed",
+      "annotation" : "Op code completed event"
+    },
+    {
+      "name" : "LedBlinker.led.InvalidBlinkArgument",
+      "severity" : "WARNING_LO",
+      "formalParams" : [
+        {
+          "name" : "badArgument",
+          "type" : {
+            "name" : "Fw.On",
+            "kind" : "qualifiedIdentifier"
+          },
+          "ref" : false
+        }
+      ],
+      "id" : 65536,
+      "format" : "Invalid Blinking Argument: {}",
+      "annotation" : "Indicates we received an invalid argument."
+    },
+    {
+      "name" : "LedBlinker.eventLogger.ID_FILTER_ENABLED",
+      "severity" : "ACTIVITY_HI",
+      "formalParams" : [
+        {
+          "name" : "ID",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The ID filtered"
+        }
+      ],
+      "id" : 513,
+      "format" : "ID {} is filtered.",
+      "annotation" : "Indicate ID is filtered"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.NoOpStringReceived",
+      "severity" : "ACTIVITY_HI",
+      "formalParams" : [
+        {
+          "name" : "message",
+          "type" : {
+            "name" : "string",
+            "kind" : "string",
+            "size" : 40
+          },
+          "ref" : false,
+          "annotation" : "The NO-OP string that is generated"
+        }
+      ],
+      "id" : 264,
+      "format" : "Received a NO-OP string={}",
+      "annotation" : "The command dispatcher has successfully received a NO-OP command from GUI with a string"
+    },
+    {
+      "name" : "LedBlinker.bufferManager.NullEmptyBuffer",
+      "severity" : "WARNING_HI",
+      "formalParams" : [
+      ],
+      "id" : 8193,
+      "format" : "Received null pointer and zero size buffer",
+      "annotation" : "The buffer manager received a null pointer and zero-sized buffer as a return. Probably undetected failed buffer allocation",
+      "throttle" : 10
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.TooManyCommands",
+      "severity" : "WARNING_HI",
+      "formalParams" : [
+        {
+          "name" : "Opcode",
+          "type" : {
+            "name" : "U32",
+            "kind" : "integer",
+            "size" : 32,
+            "signed" : false
+          },
+          "ref" : false,
+          "annotation" : "The opcode that overflowed the list"
+        }
+      ],
+      "id" : 262,
+      "format" : "Too many outstanding commands. opcode=0x{x}",
+      "annotation" : "Exceeded the number of commands that can be simultaneously executed"
+    }
+  ],
+  "telemetryChannels" : [
+    {
+      "name" : "LedBlinker.systemResources.CPU_05",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18442,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.CommandErrors",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 257,
+      "telemetryUpdate" : "on change",
+      "annotation" : "Number of command errors"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_14",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18451,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_08",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18445,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.MEMORY_TOTAL",
+      "type" : {
+        "name" : "U64",
+        "kind" : "integer",
+        "size" : 64,
+        "signed" : false
+      },
+      "id" : 18432,
+      "telemetryUpdate" : "always",
+      "format" : "{} KB",
+      "annotation" : "Total system memory in KB"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_04",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18441,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_15",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18452,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.bufferManager.NoBuffs",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 8195,
+      "telemetryUpdate" : "on change",
+      "annotation" : "The number of requests that couldn't return a buffer",
+      "limits" : {
+        "high" : {
+          "red" : 1
+        }
+      }
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_12",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18449,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_02",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18439,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_06",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18443,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_03",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18440,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.rateGroup1.CycleTime",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 4097,
+      "telemetryUpdate" : "always",
+      "format" : "{} us",
+      "annotation" : "Execution time of current cycle"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_01",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18438,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_00",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18437,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18436,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_09",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18446,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.bufferManager.EmptyBuffs",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 8196,
+      "telemetryUpdate" : "on change",
+      "annotation" : "The number of empty buffers returned",
+      "limits" : {
+        "high" : {
+          "red" : 1
+        }
+      }
+    },
+    {
+      "name" : "LedBlinker.cmdDisp.CommandsDispatched",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 256,
+      "telemetryUpdate" : "on change",
+      "annotation" : "Number of commands dispatched"
+    },
+    {
+      "name" : "LedBlinker.systemResources.MEMORY_USED",
+      "type" : {
+        "name" : "U64",
+        "kind" : "integer",
+        "size" : 64,
+        "signed" : false
+      },
+      "id" : 18433,
+      "telemetryUpdate" : "always",
+      "format" : "{} KB",
+      "annotation" : "System memory used in KB"
+    },
+    {
+      "name" : "LedBlinker.rateGroup1.MaxCycleTime",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 4096,
+      "telemetryUpdate" : "on change",
+      "format" : "{} us",
+      "annotation" : "Max execution time of rate group cycle"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_07",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18444,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.bufferManager.TotalBuffs",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 8192,
+      "telemetryUpdate" : "on change",
+      "annotation" : "The total buffers allocated"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_11",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18448,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.NON_VOLATILE_TOTAL",
+      "type" : {
+        "name" : "U64",
+        "kind" : "integer",
+        "size" : 64,
+        "signed" : false
+      },
+      "id" : 18434,
+      "telemetryUpdate" : "always",
+      "format" : "{} KB",
+      "annotation" : "System non-volatile available in KB"
+    },
+    {
+      "name" : "LedBlinker.bufferManager.HiBuffs",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 8194,
+      "telemetryUpdate" : "on change",
+      "annotation" : "The high water mark of allocated buffers"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_10",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18447,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.rateGroup1.CycleCount",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 4098,
+      "telemetryUpdate" : "always",
+      "annotation" : "Count of number of cycles"
+    },
+    {
+      "name" : "LedBlinker.bufferManager.CurrBuffs",
+      "type" : {
+        "name" : "U32",
+        "kind" : "integer",
+        "size" : 32,
+        "signed" : false
+      },
+      "id" : 8193,
+      "telemetryUpdate" : "on change",
+      "annotation" : "The current number of allocated buffers"
+    },
+    {
+      "name" : "LedBlinker.systemResources.CPU_13",
+      "type" : {
+        "name" : "F32",
+        "kind" : "float",
+        "size" : 32
+      },
+      "id" : 18450,
+      "telemetryUpdate" : "always",
+      "format" : "{.2f} percent",
+      "annotation" : "System's CPU Percentage"
+    },
+    {
+      "name" : "LedBlinker.systemResources.NON_VOLATILE_FREE",
+      "type" : {
+        "name" : "U64",
+        "kind" : "integer",
+        "size" : 64,
+        "signed" : false
+      },
+      "id" : 18435,
+      "telemetryUpdate" : "always",
+      "format" : "{} KB",
+      "annotation" : "System non-volatile available in KB"
+    },
+    {
+      "name" : "LedBlinker.led.BlinkingState",
+      "type" : {
+        "name" : "Fw.On",
+        "kind" : "qualifiedIdentifier"
+      },
+      "id" : 65536,
+      "telemetryUpdate" : "always",
+      "annotation" : "Telemetry channel to report blinking state."
+    }
+  ],
+  "records" : [
+  ],
+  "containers" : [
+  ]
+}

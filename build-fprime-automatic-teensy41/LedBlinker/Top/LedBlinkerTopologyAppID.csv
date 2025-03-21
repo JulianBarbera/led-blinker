@@ -1,0 +1,17 @@
+component,instance,base_id,base_window_range
+CommandDispatcher,cmdDisp,256,11
+ActiveLogger,eventLogger,512,5
+TlmChan,tlmSend,768,0
+PassiveRateGroup,rateGroup1,4096,3
+BufferManager,bufferManager,8192,5
+StreamDriver,commDriver,16384,0
+Framer,framer,16640,0
+FatalHandler,fatalHandler,17152,0
+ArduinoTime,timeHandler,17408,1
+RateGroupDriver,rateGroupDriver,17664,0
+PassiveTextLogger,textLogger,17920,0
+Deframer,deframer,18176,0
+SystemResources,systemResources,18432,21
+HardwareRateDriver,rateDriver,18688,0
+GpioDriver,gpioDriver,20480,0
+Led,led,65536,3

@@ -1,0 +1,299 @@
+<dictionary topology="LedBlinker" framework_version="3.6.2" project_version="3.6.2">
+  <enums>
+    <enum type="Fw::DeserialStatus" serialize_type="I32">
+      <item name="OK" value="0" description=""/>
+      <item name="BUFFER_EMPTY" value="3" description="Deserialization buffer was empty when trying to read data"/>
+      <item name="FORMAT_ERROR" value="4" description="Deserialization data had incorrect values (unexpected data types)"/>
+      <item name="SIZE_MISMATCH" value="5" description="Data was left in in the buffer, but not enough to deserialize"/>
+      <item name="TYPE_MISMATCH" value="6" description="Deserialized type ID didn&amp;apos;t match"/>
+    </enum>
+    <enum type="Svc::ActiveLogger_Enabled" serialize_type="I32">
+      <item name="ENABLED" value="0" description="Enabled state"/>
+      <item name="DISABLED" value="1" description="Disabled state"/>
+    </enum>
+    <enum type="Svc::ActiveLogger_FilterSeverity" serialize_type="I32">
+      <item name="WARNING_HI" value="0" description="Filter WARNING_HI events"/>
+      <item name="WARNING_LO" value="1" description="Filter WARNING_LO events"/>
+      <item name="COMMAND" value="2" description="Filter COMMAND events"/>
+      <item name="ACTIVITY_HI" value="3" description="Filter ACTIVITY_HI events"/>
+      <item name="ACTIVITY_LO" value="4" description="Filter ACTIVITY_LO events"/>
+      <item name="DIAGNOSTIC" value="5" description="Filter DIAGNOSTIC events"/>
+    </enum>
+    <enum type="Drv::SendStatus" serialize_type="I32">
+      <item name="SEND_OK" value="0" description="Send worked as expected"/>
+      <item name="SEND_RETRY" value="1" description="Data send should be retried"/>
+      <item name="SEND_ERROR" value="2" description="Send error occurred retrying may succeed"/>
+    </enum>
+    <enum type="Fw::Success" serialize_type="I32">
+      <item name="FAILURE" value="0" description="Representing failure"/>
+      <item name="SUCCESS" value="1" description="Representing success"/>
+    </enum>
+    <enum type="Drv::PollStatus" serialize_type="I32">
+      <item name="POLL_OK" value="0" description="Poll successfully received data"/>
+      <item name="POLL_RETRY" value="1" description="No data available, retry later"/>
+      <item name="POLL_ERROR" value="2" description="Error received when polling"/>
+    </enum>
+    <enum type="Drv::RecvStatus" serialize_type="I32">
+      <item name="RECV_OK" value="0" description="Receive worked as expected"/>
+      <item name="RECV_NO_DATA" value="1" description="Receive worked, but there was no data"/>
+      <item name="RECV_ERROR" value="2" description="Receive error occurred retrying may succeed"/>
+    </enum>
+    <enum type="Svc::SystemResourceEnabled" serialize_type="I32">
+      <item name="DISABLED" value="0" description=""/>
+      <item name="ENABLED" value="1" description=""/>
+    </enum>
+    <enum type="Fw::On" serialize_type="I32">
+      <item name="OFF" value="0" description="Off state"/>
+      <item name="ON" value="1" description="On state"/>
+    </enum>
+    <enum type="Drv::GpioStatus" serialize_type="I32">
+      <item name="OP_OK" value="0" description="Operation succeeded"/>
+      <item name="NOT_OPENED" value="1" description="Pin was never opened"/>
+      <item name="INVALID_MODE" value="2" description="Operation not permitted with current configuration"/>
+      <item name="UNKNOWN_ERROR" value="3" description="An unknown error occurred"/>
+    </enum>
+    <enum type="Fw::Logic" serialize_type="I32">
+      <item name="LOW" value="0" description="Logic low state"/>
+      <item name="HIGH" value="1" description="Logic high state"/>
+    </enum>
+    <enum type="Fw::CmdResponse" serialize_type="I32">
+      <item name="OK" value="0" description="Command successfully executed"/>
+      <item name="INVALID_OPCODE" value="1" description="Invalid opcode dispatched"/>
+      <item name="VALIDATION_ERROR" value="2" description="Command failed validation"/>
+      <item name="FORMAT_ERROR" value="3" description="Command failed to deserialize"/>
+      <item name="EXECUTION_ERROR" value="4" description="Command had execution error"/>
+      <item name="BUSY" value="5" description="Component busy"/>
+    </enum>
+    <enum type="Fw::LogSeverity" serialize_type="I32">
+      <item name="FATAL" value="1" description="A fatal non-recoverable event"/>
+      <item name="WARNING_HI" value="2" description="A serious but recoverable event"/>
+      <item name="WARNING_LO" value="3" description="A less serious but recoverable event"/>
+      <item name="COMMAND" value="4" description="An activity related to commanding"/>
+      <item name="ACTIVITY_HI" value="5" description="Important informational events"/>
+      <item name="ACTIVITY_LO" value="6" description="Less important informational events"/>
+      <item name="DIAGNOSTIC" value="7" description="Software diagnostic events"/>
+    </enum>
+    <enum type="Fw::ParamValid" serialize_type="I32">
+      <item name="UNINIT" value="0" description=""/>
+      <item name="VALID" value="1" description=""/>
+      <item name="INVALID" value="2" description=""/>
+      <item name="DEFAULT" value="3" description=""/>
+    </enum>
+  </enums>
+  <serializables/>
+  <arrays/>
+  <commands>
+    <command component="cmdDisp" mnemonic="CMD_NO_OP" opcode="0x100" description="No-op command">
+      <args/>
+    </command>
+    <command component="cmdDisp" mnemonic="CMD_NO_OP_STRING" opcode="0x101" description="No-op string command">
+      <args>
+        <arg name="arg1" description="&#10;          The String command argument&#10;          " len="40" type="string"/>
+      </args>
+    </command>
+    <command component="cmdDisp" mnemonic="CMD_TEST_CMD_1" opcode="0x102" description="No-op command">
+      <args>
+        <arg name="arg1" description="&#10;          The I32 command argument&#10;          " type="I32"/>
+        <arg name="arg2" description="&#10;          The F32 command argument&#10;          " type="F32"/>
+        <arg name="arg3" description="&#10;          The U8 command argument&#10;          " type="U8"/>
+      </args>
+    </command>
+    <command component="cmdDisp" mnemonic="CMD_CLEAR_TRACKING" opcode="0x103" description="Clear command tracking info to recover from components not returning status">
+      <args/>
+    </command>
+    <command component="eventLogger" mnemonic="SET_EVENT_FILTER" opcode="0x200" description="Set filter for reporting events. Events are not stored in component.">
+      <args>
+        <arg name="filterLevel" description="&#10;          Filter level&#10;          " type="Svc::ActiveLogger_FilterSeverity"/>
+        <arg name="filterEnabled" description="&#10;          Filter state&#10;          " type="Svc::ActiveLogger_Enabled"/>
+      </args>
+    </command>
+    <command component="eventLogger" mnemonic="SET_ID_FILTER" opcode="0x202" description="Filter a particular ID">
+      <args>
+        <arg name="ID" type="U32"/>
+        <arg name="idFilterEnabled" description="&#10;          ID filter state&#10;          " type="Svc::ActiveLogger_Enabled"/>
+      </args>
+    </command>
+    <command component="eventLogger" mnemonic="DUMP_FILTER_STATE" opcode="0x203" description="Dump the filter states via events">
+      <args/>
+    </command>
+    <command component="timeHandler" mnemonic="SET_TIME" opcode="0x4400" description="Command to set the time">
+      <args>
+        <arg name="year" description="&#10;          The current year&#10;          " type="U32"/>
+        <arg name="month" description="&#10;          The current month (1-12)&#10;          " type="U8"/>
+        <arg name="day" description="&#10;          The current day (1-31)&#10;          " type="U8"/>
+        <arg name="hour" description="&#10;          The current hour (0-23)&#10;          " type="U8"/>
+        <arg name="minute" description="&#10;          The current minute (0-59)&#10;          " type="U8"/>
+        <arg name="second" description="&#10;          The current second (0-59)&#10;          " type="U8"/>
+      </args>
+    </command>
+    <command component="systemResources" mnemonic="ENABLE" opcode="0x4800" description="A command to enable or disable system resource telemetry">
+      <args>
+        <arg name="enable" description="&#10;          whether or not system resource telemetry is enabled&#10;          " type="Svc::SystemResourceEnabled"/>
+      </args>
+    </command>
+    <command component="led" mnemonic="BLINKING_ON_OFF" opcode="0x10000" description="Command to turn on or off the blinking LED">
+      <args>
+        <arg name="on_off" description="&#10;          Indicates whether the blinking should be on or off&#10;          " type="Fw::On"/>
+      </args>
+    </command>
+    <command component="led" mnemonic="BLINK_INTERVAL_PRM_SET" opcode="0x10001" description="Blinking interval in rate group ticks parameter set">
+      <args>
+        <arg name="val" type="U32"/>
+      </args>
+    </command>
+    <command component="led" mnemonic="BLINK_INTERVAL_PRM_SAVE" opcode="0x10002" description="Blinking interval in rate group ticks parameter save"/>
+  </commands>
+  <events>
+    <event component="cmdDisp" name="OpCodeRegistered" id="0x100" severity="DIAGNOSTIC" format_string="Opcode 0x%x registered to port %d slot %d">
+      <args>
+        <arg name="Opcode" description="The opcode to register" type="U32"/>
+        <arg name="port" description="The registration port" type="I32"/>
+        <arg name="slot" description="The dispatch slot it was placed in" type="I32"/>
+      </args>
+    </event>
+    <event component="cmdDisp" name="OpCodeDispatched" id="0x101" severity="COMMAND" description="Op code dispatched event" format_string="Opcode 0x%x dispatched to port %d">
+      <args>
+        <arg name="Opcode" description="The opcode dispatched" type="U32"/>
+        <arg name="port" description="The port dispatched to" type="I32"/>
+      </args>
+    </event>
+    <event component="cmdDisp" name="OpCodeCompleted" id="0x102" severity="COMMAND" description="Op code completed event" format_string="Opcode 0x%x completed">
+      <args>
+        <arg name="Opcode" description="The I32 command argument" type="U32"/>
+      </args>
+    </event>
+    <event component="cmdDisp" name="OpCodeError" id="0x103" severity="COMMAND" description="Op code completed with error event" format_string="Opcode 0x%x completed with error %s">
+      <args>
+        <arg name="Opcode" description="The opcode with the error" type="U32"/>
+        <arg name="error" description="The error value" type="Fw::CmdResponse"/>
+      </args>
+    </event>
+    <event component="cmdDisp" name="MalformedCommand" id="0x104" severity="WARNING_HI" description="Received a malformed command packet" format_string="Received malformed command packet. Status: %s">
+      <args>
+        <arg name="Status" description="The deserialization error" type="Fw::DeserialStatus"/>
+      </args>
+    </event>
+    <event component="cmdDisp" name="InvalidCommand" id="0x105" severity="WARNING_HI" description="Received an invalid opcode" format_string="Invalid opcode 0x%x received">
+      <args>
+        <arg name="Opcode" description="Invalid opcode" type="U32"/>
+      </args>
+    </event>
+    <event component="cmdDisp" name="TooManyCommands" id="0x106" severity="WARNING_HI" description="Exceeded the number of commands that can be simultaneously executed" format_string="Too many outstanding commands. opcode=0x%x">
+      <args>
+        <arg name="Opcode" description="The opcode that overflowed the list" type="U32"/>
+      </args>
+    </event>
+    <event component="cmdDisp" name="NoOpReceived" id="0x107" severity="ACTIVITY_HI" description="The command dispatcher has successfully received a NO-OP command" format_string="Received a NO-OP command">
+      <args/>
+    </event>
+    <event component="cmdDisp" name="NoOpStringReceived" id="0x108" severity="ACTIVITY_HI" description="The command dispatcher has successfully received a NO-OP command from GUI with a string" format_string="Received a NO-OP string=%s">
+      <args>
+        <arg name="message" description="The NO-OP string that is generated" len="40" type="string"/>
+      </args>
+    </event>
+    <event component="cmdDisp" name="TestCmd1Args" id="0x109" severity="ACTIVITY_HI" description="This log event message returns the TEST_CMD_1 arguments." format_string="TEST_CMD_1 args: I32: %d, F32: %f, U8: %u">
+      <args>
+        <arg name="arg1" description="Arg1" type="I32"/>
+        <arg name="arg2" description="Arg2" type="F32"/>
+        <arg name="arg3" description="Arg3" type="U8"/>
+      </args>
+    </event>
+    <event component="cmdDisp" name="OpCodeReregistered" id="0x10a" severity="DIAGNOSTIC" description="Op code reregistered event" format_string="Opcode 0x%x is already registered to port %d">
+      <args>
+        <arg name="Opcode" description="The opcode reregistered" type="U32"/>
+        <arg name="port" description="The reregistration port" type="I32"/>
+      </args>
+    </event>
+    <event component="eventLogger" name="SEVERITY_FILTER_STATE" id="0x200" severity="ACTIVITY_LO" description="Dump severity filter state" format_string="%s filter state. %d">
+      <args>
+        <arg name="severity" description="The severity level" type="Svc::ActiveLogger_FilterSeverity"/>
+        <arg name="enabled" type="bool"/>
+      </args>
+    </event>
+    <event component="eventLogger" name="ID_FILTER_ENABLED" id="0x201" severity="ACTIVITY_HI" description="Indicate ID is filtered" format_string="ID %u is filtered.">
+      <args>
+        <arg name="ID" description="The ID filtered" type="U32"/>
+      </args>
+    </event>
+    <event component="eventLogger" name="ID_FILTER_LIST_FULL" id="0x202" severity="WARNING_LO" description="Attempted to add ID to full ID filter ID" format_string="ID filter list is full. Cannot filter %u .">
+      <args>
+        <arg name="ID" description="The ID filtered" type="U32"/>
+      </args>
+    </event>
+    <event component="eventLogger" name="ID_FILTER_REMOVED" id="0x203" severity="ACTIVITY_HI" description="Removed an ID from the filter" format_string="ID filter ID %u removed.">
+      <args>
+        <arg name="ID" description="The ID removed" type="U32"/>
+      </args>
+    </event>
+    <event component="eventLogger" name="ID_FILTER_NOT_FOUND" id="0x204" severity="WARNING_LO" description="ID not in filter" format_string="ID filter ID %u not found.">
+      <args>
+        <arg name="ID" description="The ID removed" type="U32"/>
+      </args>
+    </event>
+    <event component="bufferManager" name="NoBuffsAvailable" id="0x2000" severity="WARNING_HI" description="The BufferManager was unable to allocate a requested buffer" format_string="No available buffers of size %u">
+      <args>
+        <arg name="size" description="The requested size" type="U32"/>
+      </args>
+    </event>
+    <event component="bufferManager" name="NullEmptyBuffer" id="0x2001" severity="WARNING_HI" description="The buffer manager received a null pointer and zero-sized buffer as a return. Probably undetected failed buffer allocation" format_string="Received null pointer and zero size buffer">
+      <args/>
+    </event>
+    <event component="timeHandler" name="TimeUpdate" id="0x4400" severity="ACTIVITY_HI" description="Command to set the time" format_string="Time updated from %u.%u (%u) to %u.%u (%u)">
+      <args>
+        <arg name="original_seconds" description="The seconds before the time update" type="U32"/>
+        <arg name="original_microseconds" description="The microseconds before the time update" type="U32"/>
+        <arg name="original_base" description="The time base before the update" type="U8"/>
+        <arg name="new_seconds" description="The seconds after the time update" type="U32"/>
+        <arg name="new_microseconds" description="The microseconds after the time update" type="U32"/>
+        <arg name="new_base" description="The time base adter the update" type="U8"/>
+      </args>
+    </event>
+    <event component="led" name="InvalidBlinkArgument" id="0x10000" severity="WARNING_LO" description="Indicates we received an invalid argument." format_string="Invalid Blinking Argument: %s">
+      <args>
+        <arg name="badArgument" type="Fw::On"/>
+      </args>
+    </event>
+    <event component="led" name="SetBlinkingState" id="0x10001" severity="ACTIVITY_HI" description="Reports the state we set to blinking." format_string="Set blinking state to %s.">
+      <args>
+        <arg name="state" type="Fw::On"/>
+      </args>
+    </event>
+  </events>
+  <channels>
+    <channel component="cmdDisp" name="CommandsDispatched" id="0x100" description="Number of commands dispatched" type="U32"/>
+    <channel component="cmdDisp" name="CommandErrors" id="0x101" description="Number of command errors" type="U32"/>
+    <channel component="rateGroup1" name="MaxCycleTime" id="0x1000" format_string="%u us" description="Max execution time of rate group cycle" type="U32"/>
+    <channel component="rateGroup1" name="CycleTime" id="0x1001" format_string="%u us" description="Execution time of current cycle" type="U32"/>
+    <channel component="rateGroup1" name="CycleCount" id="0x1002" description="Count of number of cycles" type="U32"/>
+    <channel component="bufferManager" name="TotalBuffs" id="0x2000" description="The total buffers allocated" type="U32"/>
+    <channel component="bufferManager" name="CurrBuffs" id="0x2001" description="The current number of allocated buffers" type="U32"/>
+    <channel component="bufferManager" name="HiBuffs" id="0x2002" description="The high water mark of allocated buffers" type="U32"/>
+    <channel component="bufferManager" name="NoBuffs" id="0x2003" description="The number of requests that couldn't return a buffer" high_red="1" type="U32"/>
+    <channel component="bufferManager" name="EmptyBuffs" id="0x2004" description="The number of empty buffers returned" high_red="1" type="U32"/>
+    <channel component="systemResources" name="MEMORY_TOTAL" id="0x4800" format_string="%lu KB" description="Total system memory in KB" type="U64"/>
+    <channel component="systemResources" name="MEMORY_USED" id="0x4801" format_string="%lu KB" description="System memory used in KB" type="U64"/>
+    <channel component="systemResources" name="NON_VOLATILE_TOTAL" id="0x4802" format_string="%lu KB" description="System non-volatile available in KB" type="U64"/>
+    <channel component="systemResources" name="NON_VOLATILE_FREE" id="0x4803" format_string="%lu KB" description="System non-volatile available in KB" type="U64"/>
+    <channel component="systemResources" name="CPU" id="0x4804" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_00" id="0x4805" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_01" id="0x4806" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_02" id="0x4807" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_03" id="0x4808" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_04" id="0x4809" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_05" id="0x480a" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_06" id="0x480b" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_07" id="0x480c" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_08" id="0x480d" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_09" id="0x480e" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_10" id="0x480f" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_11" id="0x4810" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_12" id="0x4811" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_13" id="0x4812" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_14" id="0x4813" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="systemResources" name="CPU_15" id="0x4814" format_string="%.2f percent" description="System's CPU Percentage" type="F32"/>
+    <channel component="led" name="BlinkingState" id="0x10000" description="Telemetry channel to report blinking state." type="Fw::On"/>
+  </channels>
+  <parameters>
+    <parameter component="led" name="BLINK_INTERVAL" id="0x10000" default="0"/>
+  </parameters>
+</dictionary>

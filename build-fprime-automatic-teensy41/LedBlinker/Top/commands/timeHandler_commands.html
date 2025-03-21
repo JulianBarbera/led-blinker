@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>timeHandler:ArduinoTime Component Dictionary</title>
+</head>
+<body>
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: left;
+}
+html {
+    font-family: Arial, sans-serif ;
+    font-size: 90% ;
+}
+</style>
+
+
+<h1><b>Command: timeHandler:ArduinoTime</b></h1>
+
+
+
+<table>
+	<thead>
+		<tr style = "border-right: 2px solid black; border-left: 2px solid black; border-top: 2px solid black;">
+			<th rowspan = "2">Mnemonic</th>
+			<th rowspan = "2">ID</th>
+			<th rowspan = "2">Description</th>
+			<th rowspan = "1" colspan = "3">Arguments</th>
+		</tr>
+		<tr style = "border-right: 2px solid black; ">
+			<th>Argument</th>
+			<th>Type</th>
+			<th>Description</th>
+		<tr>
+	</thead>
+	<tbody>
+
+		<tr style = "border: 2px solid black;">
+			<td rowspan="7">SET_TIME</td>
+			<td rowspan="7">17408 (0x4400)</td>
+			<td rowspan="7">Command to set the time</td>
+					<tr style = "border-right: 2px solid black;border-top: 2px solid black;">
+						<td>year</td>
+						<td>U32</td>
+						<td>
+          The current year
+          </td>
+					</tr>
+					<tr style = "border-right: 2px solid black;">
+						<td>month</td>
+						<td>U8</td>
+						<td>
+          The current month (1-12)
+          </td>
+					</tr>
+					<tr style = "border-right: 2px solid black;">
+						<td>day</td>
+						<td>U8</td>
+						<td>
+          The current day (1-31)
+          </td>
+					</tr>
+					<tr style = "border-right: 2px solid black;">
+						<td>hour</td>
+						<td>U8</td>
+						<td>
+          The current hour (0-23)
+          </td>
+					</tr>
+					<tr style = "border-right: 2px solid black;">
+						<td>minute</td>
+						<td>U8</td>
+						<td>
+          The current minute (0-59)
+          </td>
+					</tr>
+					<tr style = "border-right: 2px solid black;border-bottom: 2px solid black;">
+						<td>second</td>
+						<td>U8</td>
+						<td>
+          The current second (0-59)
+          </td>
+					</tr>
+		</tr>
+	</tbody>
+</table>
+
+
+</body>
+</html>

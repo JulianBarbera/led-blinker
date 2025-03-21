@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Fw/Port/InputPortBase.cpp;/home/fish/Documents/led-blinker/lib/fprime/Fw/Port/InputSerializePort.cpp;/home/fish/Documents/led-blinker/lib/fprime/Fw/Port/OutputPortBase.cpp;/home/fish/Documents/led-blinker/lib/fprime/Fw/Port/OutputSerializePort.cpp;/home/fish/Documents/led-blinker/lib/fprime/Fw/Port/PortBase.cpp
+
+
+Fw/Cfg;Fw/Types;Fw/Logger;Fw/Obj

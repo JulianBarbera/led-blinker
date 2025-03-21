@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Svc/FileManager/FileManager.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/FileManager/FileManagerComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/FileManager/FileManagerComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/FileManager/FileManagerComponentAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/FileManager/FileManager.fpp;/home/fish/Documents/led-blinker/lib/fprime/Svc/FileManager/Commands.fppi;/home/fish/Documents/led-blinker/lib/fprime/Svc/FileManager/Events.fppi;/home/fish/Documents/led-blinker/lib/fprime/Svc/FileManager/Telemetry.fppi
+Os;Fw/FilePacket;Utils/Hash;CFDP/Checksum

@@ -1,0 +1,7 @@
+/home/fish/Documents/led-blinker/lib/fprime/Fw/Buffer/Buffer.fpp
+/home/fish/Documents/led-blinker/lib/fprime/Fw/Log/Log.fpp
+/home/fish/Documents/led-blinker/lib/fprime/Fw/Time/Time.fpp
+/home/fish/Documents/led-blinker/lib/fprime/Fw/Tlm/Tlm.fpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/BufferManager/Events.fppi
+/home/fish/Documents/led-blinker/lib/fprime/Svc/BufferManager/Telemetry.fppi
+/home/fish/Documents/led-blinker/lib/fprime/Svc/Sched/Sched.fpp

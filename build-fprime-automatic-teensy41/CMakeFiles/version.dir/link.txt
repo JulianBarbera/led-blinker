@@ -1,0 +1,2 @@
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar rcs lib/teensy41/libversion.a CMakeFiles/version.dir/versions/version.cpp.obj
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-ranlib lib/teensy41/libversion.a

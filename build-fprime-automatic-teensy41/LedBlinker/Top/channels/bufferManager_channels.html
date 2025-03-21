@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bufferManager:BufferManager Component Dictionary</title>
+</head>
+<body>
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: left;
+}
+html {
+    font-family: Arial, sans-serif ;
+    font-size: 90% ;
+}
+</style>
+
+
+<h1><b>Telemetry Channels: bufferManager:BufferManager</b></h1>
+<table>
+  <tr>
+     <th>Channel Name</th>
+     <th>ID</th>
+     <th>Type</th>
+     <th>Description</th>
+ </tr>
+
+ <tr>
+    <td>TotalBuffs</td>
+    <td>8192 (0x2000)</td>
+    <td>U32</td>
+    <td>The total buffers allocated</td>
+ </tr>
+ <tr>
+    <td>CurrBuffs</td>
+    <td>8193 (0x2001)</td>
+    <td>U32</td>
+    <td>The current number of allocated buffers</td>
+ </tr>
+ <tr>
+    <td>HiBuffs</td>
+    <td>8194 (0x2002)</td>
+    <td>U32</td>
+    <td>The high water mark of allocated buffers</td>
+ </tr>
+ <tr>
+    <td>NoBuffs</td>
+    <td>8195 (0x2003)</td>
+    <td>U32</td>
+    <td>The number of requests that couldn't return a buffer</td>
+ </tr>
+ <tr>
+    <td>EmptyBuffs</td>
+    <td>8196 (0x2004)</td>
+    <td>U32</td>
+    <td>The number of empty buffers returned</td>
+ </tr>
+</table>
+</body>
+</html>

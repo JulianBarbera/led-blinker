@@ -1,0 +1,37 @@
+     INSTANCE NAME      | BASE ID (HEX) | REQUESTED WINDOW SIZE | DIFFERENCED ID WINDOW SIZE | LARGEST COMPONENT INTERNAL ID | MAX AMOUNT OF IDS
+        cmdDisp         |  256 (0x100)  |          11           |            256             |              11               |        11        
+      eventLogger       |  512 (0x200)  |           5           |            256             |               5               |         5        
+        tlmSend         |  768 (0x300)  |           0           |            3328            |             None              |         0        
+      rateGroup1        | 4096 (0x1000) |           3           |            4096            |               3               |         3        
+     bufferManager      | 8192 (0x2000) |           5           |            8192            |               5               |         5        
+      commDriver        | 16384 (0x4000 |           0           |            256             |             None              |         0        
+                        |       )       |                       |                            |                               |                  
+        framer          | 16640 (0x4100 |           0           |            512             |             None              |         0        
+                        |       )       |                       |                            |                               |                  
+     fatalHandler       | 17152 (0x4300 |           0           |            256             |             None              |         0        
+                        |       )       |                       |                            |                               |                  
+      timeHandler       | 17408 (0x4400 |           1           |            256             |               1               |         1        
+                        |       )       |                       |                            |                               |                  
+    rateGroupDriver     | 17664 (0x4500 |           0           |            256             |             None              |         0        
+                        |       )       |                       |                            |                               |                  
+      textLogger        | 17920 (0x4600 |           0           |            256             |             None              |         0        
+                        |       )       |                       |                            |                               |                  
+       deframer         | 18176 (0x4700 |           0           |            256             |             None              |         0        
+                        |       )       |                       |                            |                               |                  
+    systemResources     | 18432 (0x4800 |          21           |            256             |              21               |        21        
+                        |       )       |                       |                            |                               |                  
+      rateDriver        | 18688 (0x4900 |           0           |            1792            |             None              |         0        
+                        |       )       |                       |                            |                               |                  
+      gpioDriver        | 20480 (0x5000 |           0           |           45056            |             None              |         0        
+                        |       )       |                       |                            |                               |                  
+          led           | 65536 (0x1000 |           3           |            inf.            |               3               |         3        
+                        |      0)       |                       |                            |                               |                  
+-------------------------------------------------------------------------------------------------------------------------------------
+| INSTANCE NAME                 - Name of the instance object.                                                                      |
+| BASE ID (HEX)                 - Base ID set for the instance.                                                                     |
+| REQUESTED WINDOW SIZE         - Specified by either the 'base_id_range' attribute in the instance tag or by finding the max of th |
+|                                 e 'base_id_range' attribute in the topology tag and the largest internal ID of the instance.      |
+| DIFFERENCED ID WINDOW SIZE    - Calculated by subtracting the current base ID from the next base ID.                              |
+| LARGEST COMPONENT INTERNAL ID - The largest ID found in the events, channels, and commands of the instance.                       |
+| MAX AMOUNT OF IDS             - The largest amount of items from either events, channels, or commands.                            |
+-------------------------------------------------------------------------------------------------------------------------------------

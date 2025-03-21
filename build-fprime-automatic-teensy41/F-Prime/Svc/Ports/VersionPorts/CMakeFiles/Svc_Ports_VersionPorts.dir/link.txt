@@ -1,0 +1,2 @@
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar rcs ../../../../lib/teensy41/libSvc_Ports_VersionPorts.a CMakeFiles/Svc_Ports_VersionPorts.dir/VersionPortAc.cpp.obj CMakeFiles/Svc_Ports_VersionPorts.dir/VersionStatusEnumAc.cpp.obj
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-ranlib ../../../../lib/teensy41/libSvc_Ports_VersionPorts.a

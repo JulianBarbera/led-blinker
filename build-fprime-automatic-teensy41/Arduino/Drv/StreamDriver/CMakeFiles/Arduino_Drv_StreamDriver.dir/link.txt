@@ -1,0 +1,2 @@
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar rcs ../../../lib/teensy41/libArduino_Drv_StreamDriver.a CMakeFiles/Arduino_Drv_StreamDriver.dir/StreamDriver.cpp.obj CMakeFiles/Arduino_Drv_StreamDriver.dir/StreamDriverArduino.cpp.obj CMakeFiles/Arduino_Drv_StreamDriver.dir/StreamDriverComponentAc.cpp.obj
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-ranlib ../../../lib/teensy41/libArduino_Drv_StreamDriver.a

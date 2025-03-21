@@ -1,0 +1,432 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      The target system is: Generic -  - arm
+      The host system is: Linux - 6.13.7-arch1-1 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc 
+      Build flags: -O2;-g;-Wall;-ffunction-sections;-fdata-sections;-nostdlib;-MMD;-mthumb;-mcpu=cortex-m7;-mfloat-abi=hard;-mfpu=fpv5-d16;-D__IMXRT1062__;-DTEENSYDUINO=159;-DARDUINO=10607;-DARDUINO_TEENSY41;-DF_CPU=600000000;-DUSB_SERIAL;-DLAYOUT_US_ENGLISH
+      Id flags:  
+      
+      The output was:
+      0
+      /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a-CMakeCCompilerId.d"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification could not be found in:
+        /home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/3.31.6/CompilerIdC/a-CMakeCCompilerId.d
+      
+      The C compiler identification is GNU, found in:
+        /home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/3.31.6/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-g++ 
+      Build flags: -O2;-g;-Wall;-ffunction-sections;-fdata-sections;-nostdlib;-MMD;-std=gnu++17;-fno-exceptions;-fpermissive;-fno-rtti;-fno-threadsafe-statics;-felide-constructors;-Wno-error=narrowing;-mthumb;-mcpu=cortex-m7;-mfloat-abi=hard;-mfpu=fpv5-d16;-D__IMXRT1062__;-DTEENSYDUINO=159;-DARDUINO=10607;-DARDUINO_TEENSY41;-DF_CPU=600000000;-DUSB_SERIAL;-DLAYOUT_US_ENGLISH
+      Id flags:  
+      
+      The output was:
+      0
+      /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a-CMakeCXXCompilerId.d"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification could not be found in:
+        /home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/3.31.6/CompilerIdCXX/a-CMakeCXXCompilerId.d
+      
+      The CXX compiler identification is GNU, found in:
+        /home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/3.31.6/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-psypMQ"
+      binary: "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-psypMQ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-O2 -g -Wall -ffunction-sections -fdata-sections -nostdlib -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DTEENSYDUINO=159 -DARDUINO=10607 -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-O2 -Wl,--gc-sections,--relax -T/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4/imxrt1062_t41.ld -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -L/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/arduino-cli-sketch"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-psypMQ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /sbin/make -f Makefile cmTC_6748d/fast
+        /sbin/make  -f CMakeFiles/cmTC_6748d.dir/build.make CMakeFiles/cmTC_6748d.dir/build
+        make[1]: Entering directory '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-psypMQ'
+        Building C object CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj
+        /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc   -O2 -g -Wall -ffunction-sections -fdata-sections -nostdlib -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DTEENSYDUINO=159 -DARDUINO=10607 -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH    -v -std=c++17 -std=gnu++17 -D_BOARD_TEENSY41 -DFPRIME_ARUDINO_SYNTHETIC_WRITE -DFPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW -o CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-gnu-ld --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/install/arm-none-eabi --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 11.3.Rel1' --with-bugurl=https://bugs.linaro.org/
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 11.3.1 20220712 (Arm GNU Toolchain 11.3.Rel1) 
+        COLLECT_GCC_OPTIONS='-O2' '-g' '-Wall' '-ffunction-sections' '-fdata-sections' '-nostdlib' '-MMD' '-mthumb' '-mcpu=cortex-m7' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-D' '__IMXRT1062__' '-D' 'TEENSYDUINO=159' '-D' 'ARDUINO=10607' '-D' 'ARDUINO_TEENSY41' '-D' 'F_CPU=600000000' '-D' 'USB_SERIAL' '-D' 'LAYOUT_US_ENGLISH' '-v' '-std=c++17' '-std=gnu++17' '-D' '_BOARD_TEENSY41' '-D' 'FPRIME_ARUDINO_SYNTHETIC_WRITE' '-D' 'FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW' '-o' 'CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_6748d.dir/'
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/arm-none-eabi/11.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/ -isysroot /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi -MMD CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.d -MQ CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj -D__USES_INITFINI__ -D __IMXRT1062__ -D TEENSYDUINO=159 -D ARDUINO=10607 -D ARDUINO_TEENSY41 -D F_CPU=600000000 -D USB_SERIAL -D LAYOUT_US_ENGLISH -D _BOARD_TEENSY41 -D FPRIME_ARUDINO_SYNTHETIC_WRITE -D FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6748d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -g -O2 -Wall -std=c++17 -std=gnu++17 -version -ffunction-sections -fdata-sections -o /tmp/ccHd8EYZ.s
+        cc1: warning: command-line option '-std=c++17' is valid for C++/ObjC++ but not for C
+        cc1: warning: command-line option '-std=gnu++17' is valid for C++/ObjC++ but not for C
+        GNU C17 (Arm GNU Toolchain 11.3.Rel1) version 11.3.1 20220712 (arm-none-eabi)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/include"
+        ignoring nonexistent directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/include-fixed"
+        ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include"
+        ignoring nonexistent directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include-fixed
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        GNU C17 (Arm GNU Toolchain 11.3.Rel1) version 11.3.1 20220712 (arm-none-eabi)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 801c9e4705ed9ec92526a3ce66f3ab92
+        COLLECT_GCC_OPTIONS='-O2' '-g' '-Wall' '-ffunction-sections' '-fdata-sections' '-nostdlib' '-MMD' '-mthumb' '-mcpu=cortex-m7' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-D' '__IMXRT1062__' '-D' 'TEENSYDUINO=159' '-D' 'ARDUINO=10607' '-D' 'ARDUINO_TEENSY41' '-D' 'F_CPU=600000000' '-D' 'USB_SERIAL' '-D' 'LAYOUT_US_ENGLISH' '-v' '-std=c++17' '-std=gnu++17' '-D' '_BOARD_TEENSY41' '-D' 'FPRIME_ARUDINO_SYNTHETIC_WRITE' '-D' 'FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW' '-o' 'CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_6748d.dir/'
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj /tmp/ccHd8EYZ.s
+        GNU assembler version 2.38 (arm-none-eabi) using BFD version (Arm GNU Toolchain 11.3.Rel1) 2.38.20220708
+        COMPILER_PATH=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/arm-none-eabi/11.3.1/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+dp/hard/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-O2' '-g' '-Wall' '-ffunction-sections' '-fdata-sections' '-nostdlib' '-MMD' '-mthumb' '-mcpu=cortex-m7' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-D' '__IMXRT1062__' '-D' 'TEENSYDUINO=159' '-D' 'ARDUINO=10607' '-D' 'ARDUINO_TEENSY41' '-D' 'F_CPU=600000000' '-D' 'USB_SERIAL' '-D' 'LAYOUT_US_ENGLISH' '-v' '-std=c++17' '-std=gnu++17' '-D' '_BOARD_TEENSY41' '-D' 'FPRIME_ARUDINO_SYNTHETIC_WRITE' '-D' 'FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW' '-o' 'CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.'
+        Linking C static library libcmTC_6748d.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_6748d.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6748d.dir/link.txt --verbose=1
+        /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar rcs libcmTC_6748d.a CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj
+        /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-ranlib libcmTC_6748d.a
+        make[1]: Leaving directory '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-psypMQ'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include]
+          add: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include-fixed]
+          add: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include] ==> [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/lib/gcc/arm-none-eabi/11.3.1/include]
+        collapse include dir [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include-fixed] ==> [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/lib/gcc/arm-none-eabi/11.3.1/include-fixed]
+        collapse include dir [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include] ==> [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include]
+        implicit include dirs: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/lib/gcc/arm-none-eabi/11.3.1/include;/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/lib/gcc/arm-none-eabi/11.3.1/include-fixed;/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-gcc|;ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-gcc|;ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-psypMQ']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /sbin/make -f Makefile cmTC_6748d/fast]
+        ignore line: [/sbin/make  -f CMakeFiles/cmTC_6748d.dir/build.make CMakeFiles/cmTC_6748d.dir/build]
+        ignore line: [make[1]: Entering directory '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-psypMQ']
+        ignore line: [Building C object CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj]
+        link line: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc   -O2 -g -Wall -ffunction-sections -fdata-sections -nostdlib -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DTEENSYDUINO=159 -DARDUINO=10607 -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH    -v -std=c++17 -std=gnu++17 -D_BOARD_TEENSY41 -DFPRIME_ARUDINO_SYNTHETIC_WRITE -DFPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW -o CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+          arg [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc] ==> ignore
+          arg [-O2] ==> ignore
+          arg [-g] ==> ignore
+          arg [-Wall] ==> ignore
+          arg [-ffunction-sections] ==> ignore
+          arg [-fdata-sections] ==> ignore
+          arg [-nostdlib] ==> ignore
+          arg [-MMD] ==> ignore
+          arg [-mthumb] ==> ignore
+          arg [-mcpu=cortex-m7] ==> ignore
+          arg [-mfloat-abi=hard] ==> ignore
+          arg [-mfpu=fpv5-d16] ==> ignore
+          arg [-D__IMXRT1062__] ==> ignore
+          arg [-DTEENSYDUINO=159] ==> ignore
+          arg [-DARDUINO=10607] ==> ignore
+          arg [-DARDUINO_TEENSY41] ==> ignore
+          arg [-DF_CPU=600000000] ==> ignore
+          arg [-DUSB_SERIAL] ==> ignore
+          arg [-DLAYOUT_US_ENGLISH] ==> ignore
+          arg [-v] ==> ignore
+          arg [-std=c++17] ==> ignore
+          arg [-std=gnu++17] ==> ignore
+          arg [-D_BOARD_TEENSY41] ==> ignore
+          arg [-DFPRIME_ARUDINO_SYNTHETIC_WRITE] ==> ignore
+          arg [-DFPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW] ==> ignore
+          arg [-o] ==> ignore
+          arg [CMakeFiles/cmTC_6748d.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-c] ==> ignore
+          arg [/usr/share/cmake/Modules/CMakeCCompilerABI.c] ==> ignore
+        linker tool for 'C': /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Running the C compiler's linker: "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc" "-v"
+      Using built-in specs.
+      COLLECT_GCC=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc
+      COLLECT_LTO_WRAPPER=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/arm-none-eabi/11.3.1/lto-wrapper
+      Target: arm-none-eabi
+      Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-gnu-ld --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/install/arm-none-eabi --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 11.3.Rel1' --with-bugurl=https://bugs.linaro.org/
+      Thread model: single
+      Supported LTO compression algorithms: zlib
+      gcc version 11.3.1 20220712 (Arm GNU Toolchain 11.3.Rel1)
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Running the C compiler's linker: "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc" "-V"
+      arm-none-eabi-gcc: error: unrecognized command-line option '-V'
+      arm-none-eabi-gcc: fatal error: no input files
+      compilation terminated.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Running the C compiler's linker: "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc" "--version"
+      arm-none-eabi-gcc (Arm GNU Toolchain 11.3.Rel1) 11.3.1 20220712
+      Copyright (C) 2021 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-1TS7kr"
+      binary: "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-1TS7kr"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-O2 -g -Wall -ffunction-sections -fdata-sections -nostdlib -MMD -std=gnu++17 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DTEENSYDUINO=159 -DARDUINO=10607 -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-O2 -Wl,--gc-sections,--relax -T/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4/imxrt1062_t41.ld -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -L/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/arduino-cli-sketch"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-1TS7kr'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /sbin/make -f Makefile cmTC_7be6c/fast
+        /sbin/make  -f CMakeFiles/cmTC_7be6c.dir/build.make CMakeFiles/cmTC_7be6c.dir/build
+        make[1]: Entering directory '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-1TS7kr'
+        Building CXX object CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-g++   -O2 -g -Wall -ffunction-sections -fdata-sections -nostdlib -MMD -std=gnu++17 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DTEENSYDUINO=159 -DARDUINO=10607 -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH  -std=gnu++17   -v -std=c++17 -std=gnu++17 -D_BOARD_TEENSY41 -DFPRIME_ARUDINO_SYNTHETIC_WRITE -DFPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW -o CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-g++
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-gnu-ld --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/install/arm-none-eabi --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 11.3.Rel1' --with-bugurl=https://bugs.linaro.org/
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 11.3.1 20220712 (Arm GNU Toolchain 11.3.Rel1) 
+        COLLECT_GCC_OPTIONS='-O2' '-g' '-Wall' '-ffunction-sections' '-fdata-sections' '-nostdlib' '-MMD' '-std=gnu++17' '-fno-exceptions' '-fpermissive' '-fno-rtti' '-fno-threadsafe-statics' '-felide-constructors' '-Wno-error=narrowing' '-mthumb' '-mcpu=cortex-m7' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-D' '__IMXRT1062__' '-D' 'TEENSYDUINO=159' '-D' 'ARDUINO=10607' '-D' 'ARDUINO_TEENSY41' '-D' 'F_CPU=600000000' '-D' 'USB_SERIAL' '-D' 'LAYOUT_US_ENGLISH' '-std=gnu++17' '-v' '-std=c++17' '-std=gnu++17' '-D' '_BOARD_TEENSY41' '-D' 'FPRIME_ARUDINO_SYNTHETIC_WRITE' '-D' 'FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW' '-o' 'CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_7be6c.dir/'
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/arm-none-eabi/11.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/ -isysroot /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi -MMD CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.d -MQ CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj -D__USES_INITFINI__ -D __IMXRT1062__ -D TEENSYDUINO=159 -D ARDUINO=10607 -D ARDUINO_TEENSY41 -D F_CPU=600000000 -D USB_SERIAL -D LAYOUT_US_ENGLISH -D _BOARD_TEENSY41 -D FPRIME_ARUDINO_SYNTHETIC_WRITE -D FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7be6c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -g -O2 -Wall -Wno-error=narrowing -std=gnu++17 -std=gnu++17 -std=c++17 -std=gnu++17 -version -ffunction-sections -fdata-sections -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -o /tmp/ccJEUUpc.s
+        GNU C++17 (Arm GNU Toolchain 11.3.Rel1) version 11.3.1 20220712 (arm-none-eabi)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1"
+        ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/arm-none-eabi/thumb/v7e-m+dp/hard"
+        ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/backward"
+        ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/include"
+        ignoring nonexistent directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/include-fixed"
+        ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include"
+        ignoring nonexistent directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/arm-none-eabi/thumb/v7e-m+dp/hard
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/backward
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include-fixed
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        GNU C++17 (Arm GNU Toolchain 11.3.Rel1) version 11.3.1 20220712 (arm-none-eabi)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 4ad1443e6a345a117fb272ac1069ae94
+        COLLECT_GCC_OPTIONS='-O2' '-g' '-Wall' '-ffunction-sections' '-fdata-sections' '-nostdlib' '-MMD' '-std=gnu++17' '-fno-exceptions' '-fpermissive' '-fno-rtti' '-fno-threadsafe-statics' '-felide-constructors' '-Wno-error=narrowing' '-mthumb' '-mcpu=cortex-m7' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-D' '__IMXRT1062__' '-D' 'TEENSYDUINO=159' '-D' 'ARDUINO=10607' '-D' 'ARDUINO_TEENSY41' '-D' 'F_CPU=600000000' '-D' 'USB_SERIAL' '-D' 'LAYOUT_US_ENGLISH' '-std=gnu++17' '-v' '-std=c++17' '-std=gnu++17' '-D' '_BOARD_TEENSY41' '-D' 'FPRIME_ARUDINO_SYNTHETIC_WRITE' '-D' 'FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW' '-o' 'CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_7be6c.dir/'
+         /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccJEUUpc.s
+        GNU assembler version 2.38 (arm-none-eabi) using BFD version (Arm GNU Toolchain 11.3.Rel1) 2.38.20220708
+        COMPILER_PATH=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/arm-none-eabi/11.3.1/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+dp/hard/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-O2' '-g' '-Wall' '-ffunction-sections' '-fdata-sections' '-nostdlib' '-MMD' '-std=gnu++17' '-fno-exceptions' '-fpermissive' '-fno-rtti' '-fno-threadsafe-statics' '-felide-constructors' '-Wno-error=narrowing' '-mthumb' '-mcpu=cortex-m7' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-D' '__IMXRT1062__' '-D' 'TEENSYDUINO=159' '-D' 'ARDUINO=10607' '-D' 'ARDUINO_TEENSY41' '-D' 'F_CPU=600000000' '-D' 'USB_SERIAL' '-D' 'LAYOUT_US_ENGLISH' '-std=gnu++17' '-v' '-std=c++17' '-std=gnu++17' '-D' '_BOARD_TEENSY41' '-D' 'FPRIME_ARUDINO_SYNTHETIC_WRITE' '-D' 'FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW' '-o' 'CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX static library libcmTC_7be6c.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_7be6c.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7be6c.dir/link.txt --verbose=1
+        /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar rcs libcmTC_7be6c.a CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-ranlib libcmTC_7be6c.a
+        make[1]: Leaving directory '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-1TS7kr'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1]
+          add: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/arm-none-eabi/thumb/v7e-m+dp/hard]
+          add: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/backward]
+          add: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include]
+          add: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include-fixed]
+          add: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1] ==> [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include/c++/11.3.1]
+        collapse include dir [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/arm-none-eabi/thumb/v7e-m+dp/hard] ==> [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include/c++/11.3.1/arm-none-eabi/thumb/v7e-m+dp/hard]
+        collapse include dir [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/backward] ==> [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include/c++/11.3.1/backward]
+        collapse include dir [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include] ==> [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/lib/gcc/arm-none-eabi/11.3.1/include]
+        collapse include dir [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include-fixed] ==> [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/lib/gcc/arm-none-eabi/11.3.1/include-fixed]
+        collapse include dir [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include] ==> [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include]
+        implicit include dirs: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include/c++/11.3.1;/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include/c++/11.3.1/arm-none-eabi/thumb/v7e-m+dp/hard;/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include/c++/11.3.1/backward;/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/lib/gcc/arm-none-eabi/11.3.1/include;/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/lib/gcc/arm-none-eabi/11.3.1/include-fixed;/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-gcc|;ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-gcc|;ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-1TS7kr']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /sbin/make -f Makefile cmTC_7be6c/fast]
+        ignore line: [/sbin/make  -f CMakeFiles/cmTC_7be6c.dir/build.make CMakeFiles/cmTC_7be6c.dir/build]
+        ignore line: [make[1]: Entering directory '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-1TS7kr']
+        ignore line: [Building CXX object CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-g++   -O2 -g -Wall -ffunction-sections -fdata-sections -nostdlib -MMD -std=gnu++17 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DTEENSYDUINO=159 -DARDUINO=10607 -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH  -std=gnu++17   -v -std=c++17 -std=gnu++17 -D_BOARD_TEENSY41 -DFPRIME_ARUDINO_SYNTHETIC_WRITE -DFPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW -o CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-g++]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-gnu-ld --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-11/build-arm-none-eabi/install/arm-none-eabi --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 11.3.Rel1' --with-bugurl=https://bugs.linaro.org/]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.3.1 20220712 (Arm GNU Toolchain 11.3.Rel1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-O2' '-g' '-Wall' '-ffunction-sections' '-fdata-sections' '-nostdlib' '-MMD' '-std=gnu++17' '-fno-exceptions' '-fpermissive' '-fno-rtti' '-fno-threadsafe-statics' '-felide-constructors' '-Wno-error=narrowing' '-mthumb' '-mcpu=cortex-m7' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-D' '__IMXRT1062__' '-D' 'TEENSYDUINO=159' '-D' 'ARDUINO=10607' '-D' 'ARDUINO_TEENSY41' '-D' 'F_CPU=600000000' '-D' 'USB_SERIAL' '-D' 'LAYOUT_US_ENGLISH' '-std=gnu++17' '-v' '-std=c++17' '-std=gnu++17' '-D' '_BOARD_TEENSY41' '-D' 'FPRIME_ARUDINO_SYNTHETIC_WRITE' '-D' 'FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW' '-o' 'CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_7be6c.dir/']
+        ignore line: [ /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/arm-none-eabi/11.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/ -isysroot /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi -MMD CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.d -MQ CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj -D__USES_INITFINI__ -D __IMXRT1062__ -D TEENSYDUINO=159 -D ARDUINO=10607 -D ARDUINO_TEENSY41 -D F_CPU=600000000 -D USB_SERIAL -D LAYOUT_US_ENGLISH -D _BOARD_TEENSY41 -D FPRIME_ARUDINO_SYNTHETIC_WRITE -D FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7be6c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -g -O2 -Wall -Wno-error=narrowing -std=gnu++17 -std=gnu++17 -std=c++17 -std=gnu++17 -version -ffunction-sections -fdata-sections -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -o /tmp/ccJEUUpc.s]
+        ignore line: [GNU C++17 (Arm GNU Toolchain 11.3.Rel1) version 11.3.1 20220712 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1"]
+        ignore line: [ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/arm-none-eabi/thumb/v7e-m+dp/hard"]
+        ignore line: [ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/backward"]
+        ignore line: [ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/include"]
+        ignore line: [ignoring nonexistent directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1]
+        ignore line: [ /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/arm-none-eabi/thumb/v7e-m+dp/hard]
+        ignore line: [ /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/c++/11.3.1/backward]
+        ignore line: [ /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include]
+        ignore line: [ /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/include-fixed]
+        ignore line: [ /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (Arm GNU Toolchain 11.3.Rel1) version 11.3.1 20220712 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 4ad1443e6a345a117fb272ac1069ae94]
+        ignore line: [COLLECT_GCC_OPTIONS='-O2' '-g' '-Wall' '-ffunction-sections' '-fdata-sections' '-nostdlib' '-MMD' '-std=gnu++17' '-fno-exceptions' '-fpermissive' '-fno-rtti' '-fno-threadsafe-statics' '-felide-constructors' '-Wno-error=narrowing' '-mthumb' '-mcpu=cortex-m7' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-D' '__IMXRT1062__' '-D' 'TEENSYDUINO=159' '-D' 'ARDUINO=10607' '-D' 'ARDUINO_TEENSY41' '-D' 'F_CPU=600000000' '-D' 'USB_SERIAL' '-D' 'LAYOUT_US_ENGLISH' '-std=gnu++17' '-v' '-std=c++17' '-std=gnu++17' '-D' '_BOARD_TEENSY41' '-D' 'FPRIME_ARUDINO_SYNTHETIC_WRITE' '-D' 'FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW' '-o' 'CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_7be6c.dir/']
+        ignore line: [ /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccJEUUpc.s]
+        ignore line: [GNU assembler version 2.38 (arm-none-eabi) using BFD version (Arm GNU Toolchain 11.3.Rel1) 2.38.20220708]
+        ignore line: [COMPILER_PATH=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/arm-none-eabi/11.3.1/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../libexec/gcc/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+dp/hard/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/:/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-O2' '-g' '-Wall' '-ffunction-sections' '-fdata-sections' '-nostdlib' '-MMD' '-std=gnu++17' '-fno-exceptions' '-fpermissive' '-fno-rtti' '-fno-threadsafe-statics' '-felide-constructors' '-Wno-error=narrowing' '-mthumb' '-mcpu=cortex-m7' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-D' '__IMXRT1062__' '-D' 'TEENSYDUINO=159' '-D' 'ARDUINO=10607' '-D' 'ARDUINO_TEENSY41' '-D' 'F_CPU=600000000' '-D' 'USB_SERIAL' '-D' 'LAYOUT_US_ENGLISH' '-std=gnu++17' '-v' '-std=c++17' '-std=gnu++17' '-D' '_BOARD_TEENSY41' '-D' 'FPRIME_ARUDINO_SYNTHETIC_WRITE' '-D' 'FPRIME_ARUDINO_SYNTHETIC_NEW_NOTHROW' '-o' 'CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX static library libcmTC_7be6c.a]
+        ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_7be6c.dir/cmake_clean_target.cmake]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7be6c.dir/link.txt --verbose=1]
+        link line: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar rcs libcmTC_7be6c.a CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj]
+          arg [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar] ==> ignore
+          arg [rcs] ==> ignore
+          arg [libcmTC_7be6c.a] ==> ignore
+          arg [CMakeFiles/cmTC_7be6c.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+        ignore line: [/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-ranlib libcmTC_7be6c.a]
+        ignore line: [make[1]: Leaving directory '/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/CMakeFiles/CMakeScratch/TryCompile-1TS7kr']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+...

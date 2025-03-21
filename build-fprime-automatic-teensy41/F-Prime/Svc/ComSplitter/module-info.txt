@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Svc/ComSplitter/ComSplitter.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/ComSplitter/ComSplitterComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/ComSplitter/ComSplitterComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/ComSplitter/ComSplitterComponentAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/ComSplitter/ComSplitter.fpp
+

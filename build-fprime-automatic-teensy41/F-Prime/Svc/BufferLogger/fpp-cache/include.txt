@@ -1,0 +1,3 @@
+/home/fish/Documents/led-blinker/lib/fprime/Svc/BufferLogger/Commands.fppi
+/home/fish/Documents/led-blinker/lib/fprime/Svc/BufferLogger/Events.fppi
+/home/fish/Documents/led-blinker/lib/fprime/Svc/BufferLogger/Telemetry.fppi

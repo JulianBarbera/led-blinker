@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Svc/AssertFatalAdapter/AssertFatalAdapterComponentImpl.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/AssertFatalAdapter/AssertFatalAdapterComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/AssertFatalAdapter/AssertFatalAdapterComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/AssertFatalAdapter/AssertFatalAdapterComponentAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/AssertFatalAdapter/AssertFatalAdapter.fpp;/home/fish/Documents/led-blinker/lib/fprime/Svc/AssertFatalAdapter/AssertFatalEvents.fppi
+

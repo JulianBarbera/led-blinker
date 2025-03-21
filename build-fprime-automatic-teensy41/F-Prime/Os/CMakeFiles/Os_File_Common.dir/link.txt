@@ -1,0 +1,2 @@
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar rcs ../../lib/teensy41/libOs_File_Common.a CMakeFiles/Os_File_Common.dir/File.cpp.obj CMakeFiles/Os_File_Common.dir/FileSystem.cpp.obj CMakeFiles/Os_File_Common.dir/Directory.cpp.obj
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-ranlib ../../lib/teensy41/libOs_File_Common.a

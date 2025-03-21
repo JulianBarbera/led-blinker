@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/fprime-arduino/Arduino/Drv/I2cNodeDriver/I2cNodeDriver.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/Arduino/Drv/I2cNodeDriver/I2cNodeDriverComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/Arduino/Drv/I2cNodeDriver/I2cNodeDriverComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/Arduino/Drv/I2cNodeDriver/I2cNodeDriverComponentAc.hpp
+/home/fish/Documents/led-blinker/fprime-arduino/Arduino/Drv/I2cNodeDriver/I2cNodeDriver.fpp
+fprime_arduino_libraries

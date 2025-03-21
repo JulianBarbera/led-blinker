@@ -1,0 +1,77 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4"
+  },
+  {
+    "Sourcefile": "/home/fish/.cache/arduino/sketches/27260FD33E7D2638F0C9BA129EF2F1EB/sketch/tmpatwp1zf3.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Wire"
+  },
+  {
+    "Sourcefile": "/home/fish/.cache/arduino/sketches/27260FD33E7D2638F0C9BA129EF2F1EB/sketch/tmpatwp1zf3.ino.cpp",
+    "Include": "SPI.h",
+    "Includepath": "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/SPI"
+  },
+  {
+    "Sourcefile": "/home/fish/.cache/arduino/sketches/27260FD33E7D2638F0C9BA129EF2F1EB/sketch/tmpatwp1zf3.ino.cpp",
+    "Include": "TimeLib.h",
+    "Includepath": "/home/fish/Arduino/libraries/Time"
+  },
+  {
+    "Sourcefile": "/home/fish/.cache/arduino/sketches/27260FD33E7D2638F0C9BA129EF2F1EB/sketch/tmpatwp1zf3.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/.cache/arduino/sketches/27260FD33E7D2638F0C9BA129EF2F1EB/sketch/tmpatwp1zf3.S",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/.cache/arduino/sketches/27260FD33E7D2638F0C9BA129EF2F1EB/sketch/tmpatwp1zf3.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/.cache/arduino/sketches/27260FD33E7D2638F0C9BA129EF2F1EB/sketch/tmpatwp1zf3.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Wire/Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Wire/WireIMXRT.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Wire/WireKinetis.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Wire/utility/twi.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/SPI/SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/Arduino/libraries/Time/DateStrings.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/fish/Arduino/libraries/Time/Time.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

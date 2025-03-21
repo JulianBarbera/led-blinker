@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Svc/Framer/Framer.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Framer/FramerComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Framer/FramerComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Framer/FramerComponentAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/Framer/Framer.fpp
+Svc/FramingProtocol

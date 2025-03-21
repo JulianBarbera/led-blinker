@@ -1,0 +1,8 @@
+fprime-baremetal/Os/Baremetal/CMakeFiles/Os_Cpu_Baremetal.dir/Cpu.cpp.obj: \
+ /home/fish/Documents/led-blinker/fprime-baremetal/fprime-baremetal/Os/Baremetal/Cpu.cpp \
+ /home/fish/Documents/led-blinker/fprime-baremetal/fprime-baremetal/Os/Baremetal/Cpu.hpp \
+ /home/fish/Documents/led-blinker/lib/fprime/Os/Cpu.hpp \
+ /home/fish/Documents/led-blinker/lib/fprime/Os/Os.hpp \
+ /home/fish/Documents/led-blinker/config/FpConfig.h \
+ /home/fish/Documents/led-blinker/lib/fprime/Fw/Types/BasicTypes.h \
+ /home/fish/Documents/led-blinker/fprime-arduino/cmake/platform/types/arm/PlatformTypes.h

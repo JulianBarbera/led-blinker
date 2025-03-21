@@ -1,0 +1,5 @@
+
+
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Fatal/FatalEventPortAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Fatal/FatalEventPortAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Fatal/FatalEventPortAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/Fatal/Fatal.fpp
+Fw/Port

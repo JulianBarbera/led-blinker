@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/fprime-baremetal/fprime-baremetal/Svc/TlmLinearChan/TlmLinearChan.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/fprime-baremetal/Svc/TlmLinearChan/TlmLinearChanComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/fprime-baremetal/Svc/TlmLinearChan/TlmLinearChanComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/fprime-baremetal/Svc/TlmLinearChan/TlmLinearChanComponentAc.hpp
+/home/fish/Documents/led-blinker/fprime-baremetal/fprime-baremetal/Svc/TlmLinearChan/TlmLinearChan.fpp
+

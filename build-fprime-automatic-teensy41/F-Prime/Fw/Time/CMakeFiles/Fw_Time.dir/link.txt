@@ -1,0 +1,2 @@
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar rcs ../../../lib/teensy41/libFw_Time.a CMakeFiles/Fw_Time.dir/Time.cpp.obj CMakeFiles/Fw_Time.dir/TimeInterval.cpp.obj CMakeFiles/Fw_Time.dir/TimeIntervalPortAc.cpp.obj CMakeFiles/Fw_Time.dir/TimePortAc.cpp.obj
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-ranlib ../../../lib/teensy41/libFw_Time.a

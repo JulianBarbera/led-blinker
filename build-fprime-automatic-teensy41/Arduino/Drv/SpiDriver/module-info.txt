@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/fprime-arduino/Arduino/Drv/SpiDriver/SpiDriver.cpp;/home/fish/Documents/led-blinker/fprime-arduino/Arduino/Drv/SpiDriver/SpiDriverArduino.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/Arduino/Drv/SpiDriver/SpiDriverComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/Arduino/Drv/SpiDriver/SpiDriverComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/Arduino/Drv/SpiDriver/SpiDriverComponentAc.hpp
+/home/fish/Documents/led-blinker/fprime-arduino/Arduino/Drv/SpiDriver/SpiDriver.fpp
+fprime_arduino_libraries

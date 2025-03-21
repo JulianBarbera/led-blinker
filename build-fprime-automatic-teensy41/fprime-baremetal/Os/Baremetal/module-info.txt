@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/fprime-baremetal/fprime-baremetal/Os/Baremetal/Task.cpp
+
+
+Os_Task_Common;fprime-baremetal_Os_TaskRunner

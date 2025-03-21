@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Svc/DpWriter/DpWriter.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/DpWriter/DpWriterComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/DpWriter/DpWriterComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/DpWriter/DpWriterComponentAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/DpWriter/DpWriter.fpp
+Fw/Dp

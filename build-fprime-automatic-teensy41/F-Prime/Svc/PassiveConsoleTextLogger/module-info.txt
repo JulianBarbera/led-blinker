@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Svc/PassiveConsoleTextLogger/ConsoleTextLoggerImplCommon.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/PassiveConsoleTextLogger/PassiveTextLoggerComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/PassiveConsoleTextLogger/PassiveTextLoggerComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/PassiveConsoleTextLogger/PassiveTextLoggerComponentAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/PassiveConsoleTextLogger/PassiveConsoleTextLogger.fpp
+Fw/Logger

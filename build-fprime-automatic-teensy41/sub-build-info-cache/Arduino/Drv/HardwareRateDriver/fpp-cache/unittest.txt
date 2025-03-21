@@ -1,0 +1,5 @@
+HardwareRateDriverGTestBase.cpp
+HardwareRateDriverGTestBase.hpp
+HardwareRateDriverTesterBase.cpp
+HardwareRateDriverTesterBase.hpp
+HardwareRateDriverTesterHelpers.cpp

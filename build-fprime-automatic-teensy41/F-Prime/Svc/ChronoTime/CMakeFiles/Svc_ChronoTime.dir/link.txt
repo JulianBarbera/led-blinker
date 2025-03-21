@@ -1,0 +1,2 @@
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar rcs ../../../lib/teensy41/libSvc_ChronoTime.a CMakeFiles/Svc_ChronoTime.dir/ChronoTime.cpp.obj CMakeFiles/Svc_ChronoTime.dir/ChronoTimeComponentAc.cpp.obj
+/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-ranlib ../../../lib/teensy41/libSvc_ChronoTime.a

@@ -1,0 +1,5 @@
+
+
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Seq/CmdSeqCancelPortAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Seq/CmdSeqInPortAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Seq/CmdSeqCancelPortAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Seq/CmdSeqCancelPortAc.hpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Seq/CmdSeqInPortAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/Seq/CmdSeqInPortAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/Seq/Seq.fpp
+Fw/Port

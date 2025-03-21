@@ -1,0 +1,6 @@
+/home/fish/Documents/led-blinker/lib/fprime/Fw/Cmd/Cmd.fpp
+/home/fish/Documents/led-blinker/lib/fprime/Fw/Com/Com.fpp
+/home/fish/Documents/led-blinker/lib/fprime/Fw/Log/Log.fpp
+/home/fish/Documents/led-blinker/lib/fprime/Fw/Tlm/Tlm.fpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/Ping/Ping.fpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/Sched/Sched.fpp

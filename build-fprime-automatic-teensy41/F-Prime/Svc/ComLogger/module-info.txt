@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Svc/ComLogger/ComLogger.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/ComLogger/ComLoggerComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/ComLogger/ComLoggerComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/ComLogger/ComLoggerComponentAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/ComLogger/ComLogger.fpp;/home/fish/Documents/led-blinker/lib/fprime/Svc/ComLogger/Commands.fppi;/home/fish/Documents/led-blinker/lib/fprime/Svc/ComLogger/Events.fppi
+

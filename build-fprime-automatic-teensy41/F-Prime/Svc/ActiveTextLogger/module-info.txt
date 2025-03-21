@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Svc/ActiveTextLogger/ActiveTextLogger.cpp;/home/fish/Documents/led-blinker/lib/fprime/Svc/ActiveTextLogger/LogFile.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/ActiveTextLogger/ActiveTextLoggerComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/ActiveTextLogger/ActiveTextLoggerComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/ActiveTextLogger/ActiveTextLoggerComponentAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/ActiveTextLogger/ActiveTextLogger.fpp
+

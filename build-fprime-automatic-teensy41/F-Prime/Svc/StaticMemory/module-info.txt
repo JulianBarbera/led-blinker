@@ -1,0 +1,5 @@
+
+/home/fish/Documents/led-blinker/lib/fprime/Svc/StaticMemory/StaticMemoryComponentImpl.cpp
+/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/StaticMemory/StaticMemoryComponentAi.xml;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/StaticMemory/StaticMemoryComponentAc.cpp;/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/F-Prime/Svc/StaticMemory/StaticMemoryComponentAc.hpp
+/home/fish/Documents/led-blinker/lib/fprime/Svc/StaticMemory/StaticMemory.fpp
+

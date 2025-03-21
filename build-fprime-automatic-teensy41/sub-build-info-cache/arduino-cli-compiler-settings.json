@@ -1,0 +1,192 @@
+{
+    "tools": {
+        "C": "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc",
+        "CXX": "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-g++",
+        "ASM": "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc",
+        "INO": "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-g++",
+        "LINKER": "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc",
+        "AR": "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-gcc-ar"
+    },
+    "flags": {
+        "C": [
+            "-O2",
+            "-g",
+            "-Wall",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-nostdlib",
+            "-MMD",
+            "-mthumb",
+            "-mcpu=cortex-m7",
+            "-mfloat-abi=hard",
+            "-mfpu=fpv5-d16",
+            "-D__IMXRT1062__",
+            "-DTEENSYDUINO=159",
+            "-DARDUINO=10607",
+            "-DARDUINO_TEENSY41",
+            "-DF_CPU=600000000",
+            "-DUSB_SERIAL",
+            "-DLAYOUT_US_ENGLISH"
+        ],
+        "CXX": [
+            "-O2",
+            "-g",
+            "-Wall",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-nostdlib",
+            "-MMD",
+            "-std=gnu++17",
+            "-fno-exceptions",
+            "-fpermissive",
+            "-fno-rtti",
+            "-fno-threadsafe-statics",
+            "-felide-constructors",
+            "-Wno-error=narrowing",
+            "-mthumb",
+            "-mcpu=cortex-m7",
+            "-mfloat-abi=hard",
+            "-mfpu=fpv5-d16",
+            "-D__IMXRT1062__",
+            "-DTEENSYDUINO=159",
+            "-DARDUINO=10607",
+            "-DARDUINO_TEENSY41",
+            "-DF_CPU=600000000",
+            "-DUSB_SERIAL",
+            "-DLAYOUT_US_ENGLISH"
+        ],
+        "ASM": [
+            "-O2",
+            "-g",
+            "-Wall",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-nostdlib",
+            "-MMD",
+            "-x",
+            "assembler-with-cpp",
+            "-mthumb",
+            "-mcpu=cortex-m7",
+            "-mfloat-abi=hard",
+            "-mfpu=fpv5-d16",
+            "-D__IMXRT1062__",
+            "-DTEENSYDUINO=159",
+            "-DARDUINO=10607",
+            "-DARDUINO_TEENSY41",
+            "-DF_CPU=600000000",
+            "-DUSB_SERIAL",
+            "-DLAYOUT_US_ENGLISH"
+        ],
+        "INO": [
+            "-O2",
+            "-g",
+            "-Wall",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-nostdlib",
+            "-MMD",
+            "-std=gnu++17",
+            "-fno-exceptions",
+            "-fpermissive",
+            "-fno-rtti",
+            "-fno-threadsafe-statics",
+            "-felide-constructors",
+            "-Wno-error=narrowing",
+            "-mthumb",
+            "-mcpu=cortex-m7",
+            "-mfloat-abi=hard",
+            "-mfpu=fpv5-d16",
+            "-D__IMXRT1062__",
+            "-DTEENSYDUINO=159",
+            "-DARDUINO=10607",
+            "-DARDUINO_TEENSY41",
+            "-DF_CPU=600000000",
+            "-DUSB_SERIAL",
+            "-DLAYOUT_US_ENGLISH"
+        ],
+        "LINKER_EXE": [
+            "-O2",
+            "-Wl,--gc-sections,--relax",
+            "-T/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4/imxrt1062_t41.ld",
+            "-mthumb",
+            "-mcpu=cortex-m7",
+            "-mfloat-abi=hard",
+            "-mfpu=fpv5-d16",
+            "-L/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch"
+        ],
+        "AR": [
+            "rcs"
+        ]
+    },
+    "objects": [
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/libraries/Wire/Wire.cpp.o",
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/libraries/Wire/WireIMXRT.cpp.o",
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/libraries/Wire/WireKinetis.cpp.o",
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/libraries/Wire/utility/twi.c.o",
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/libraries/SPI/SPI.cpp.o",
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/libraries/Time/DateStrings.cpp.o",
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/libraries/Time/Time.cpp.o"
+    ],
+    "libraries": [
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/core/core.a",
+        "-larm_cortexM7lfsp_math",
+        "-lm",
+        "-lstdc++"
+    ],
+    "includes": {
+        "C": [
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Wire",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/SPI",
+            "/home/fish/Arduino/libraries/Time"
+        ],
+        "CXX": [
+            "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/pch",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Wire",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/SPI",
+            "/home/fish/Arduino/libraries/Time"
+        ],
+        "ASM": [
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Wire",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/SPI",
+            "/home/fish/Arduino/libraries/Time"
+        ],
+        "INO": [
+            "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch/pch",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Wire",
+            "/home/fish/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/SPI",
+            "/home/fish/Arduino/libraries/Time"
+        ]
+    },
+    "post": [
+        "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-objcopy -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 <TARGET_PATH> <TARGET_PATH>.eep",
+        "/home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-objcopy -O ihex -R .eeprom <TARGET_PATH> <TARGET_PATH>.hex",
+        "/home/fish/.arduino15/packages/teensy/tools/teensy-tools/1.59.0/teensy_secure encrypthex TEENSY41 <TARGET_PATH>.hex",
+        "/home/fish/.arduino15/packages/teensy/tools/teensy-tools/1.59.0/teensy_post_compile -file=<TARGET_NAME> -path=<TARGET_DIRECTORY> -tools=/home/fish/.arduino15/packages/teensy/tools/teensy-tools/1.59.0/ -board=TEENSY41",
+        "/home/fish/.arduino15/packages/teensy/tools/teensy-tools/1.59.0/stdout_redirect <TARGET_PATH>.sym /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-objdump -t -C <TARGET_PATH>",
+        "/home/fish/.arduino15/packages/teensy/tools/teensy-tools/1.59.0/teensy_size <TARGET_PATH>",
+        "/home/fish/.arduino15/packages/teensy/tools/teensy-tools/1.59.0/stdout_redirect <TARGET_PATH>.lst /home/fish/.arduino15/packages/teensy/tools/teensy-compile/11.3.1/arm/bin/arm-none-eabi-objdump -d -S -C <TARGET_PATH>"
+    ],
+    "arguments": [
+        "-b",
+        "teensy:avr:teensy41",
+        "--properties",
+        "--board-options",
+        "-j",
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-compiler-settings.json",
+        "--generate-code",
+        "--libraries",
+        "Wire",
+        "SPI",
+        "IntervalTimer",
+        "TimeLib",
+        "--includes",
+        "--detect-settings",
+        "--post-link",
+        "-o",
+        "/home/fish/Documents/led-blinker/build-fprime-automatic-teensy41/sub-build-info-cache/arduino-cli-sketch"
+    ]
+}
